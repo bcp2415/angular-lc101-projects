@@ -11,6 +11,6 @@ img {
 
 .photos {
   text-align: center;
-  border-right: 2px dashed black;
-  border-left: 2px dashed black;
+  border-right: 1px dashed black;
+  border-left: 1px dashed black;
 }
