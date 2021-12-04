@@ -1,12 +1,16 @@
 h3 {
-  color: brown;
+  color: #91322f;
+  text-decoration: underline;
 }
 
 img {
-  width: 50%;
+  width: 45%;
   height: auto;
+  margin: 1vh;
 }
 
 .photos {
   text-align: center;
+  border-right: 2px dashed black;
+  border-left: 2px dashed black;
 }

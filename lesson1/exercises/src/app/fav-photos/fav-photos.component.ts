@@ -6,7 +6,7 @@ import { Component, OnInit } from "@angular/core";
   styleUrls: ["./fav-photos.component.css"],
 })
 export class FavPhotosComponent implements OnInit {
-  photosTitle = "My Favorite Photos:";
+  photosTitle = "Favorite Photos";
   image1 =
     "https://s2.qwant.com/thumbr/700x0/d/5/09a282516bba83f708cb7afa4d5de7e1b620bc574d997e91be9d2f20cb1940/B9320723091Z.1_20160204132842_000_GFSDBE6ES.1-0.jpg?u=https%3A%2F%2Fwww.gannett-cdn.com%2F-mm-%2Fc72543f75dce47618e24dec54b682e2a5a0a7001%2Fc%3D0-86-1388-867%2Flocal%2F-%2Fmedia%2F2016%2F02%2F04%2FPoughkeepsie%2FB9320723091Z.1_20160204132842_000_GFSDBE6ES.1-0.jpg%3Fwidth%3D3200%26height%3D1680%26fit%3Dcrop&q=0&b=1&p=0&a=0";
   image2 =

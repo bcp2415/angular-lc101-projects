@@ -1,11 +1,12 @@
 .chores {
   font-size: x-large;
   font-family: cursive;
-  color: blueviolet;
+  color: #de615d;
 }
 
 h3 {
   text-decoration: underline;
+  color: #de615d;
 }
 
 li {
