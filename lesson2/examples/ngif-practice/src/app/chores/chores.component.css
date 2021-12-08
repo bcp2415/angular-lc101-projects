@@ -1,5 +1,5 @@
 .chores {
-    color: #ff4f33;
+    color: #33adff;
 }
 
 .doneChores {
@@ -15,4 +15,8 @@ img {
     height: auto;
     display: block;
     margin: auto;
+}
+
+#admonition {
+    color: red;
 }
