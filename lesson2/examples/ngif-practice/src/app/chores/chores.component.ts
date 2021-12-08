@@ -7,9 +7,6 @@ import { Component, OnInit } from "@angular/core";
 })
 export class ChoresComponent implements OnInit {
   chores = [
-    "Empty dishwasher",
-    "Complete LaunchCode prep work",
-    "Buy groceries",
   ];
   finishedChores = [
     "Gave woodchuck his vitamins",
