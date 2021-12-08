@@ -18,7 +18,7 @@ export class ChoresComponent implements OnInit {
     "Took nap",
   ];
 
-  targetImage = "../assets/target.png";
+  targetImage = "../../assets/target.png";
 
   constructor() {}
 

@@ -1,32 +1,17 @@
 <div class="chores">
-<<<<<<< HEAD
     <h3>Chores</h3>
     <ul>
         <li *ngFor = 'let chore of chores'>{{chore}}</li>
     </ul>
     <p id="admonition" *ngIf = "chores.length > finishedChores.length">Work harder!</p>
-=======
-  <h3>Chores</h3>
-  <ul>
-    <li *ngFor="let chore of chores">{{ chore }}</li>
-  </ul>
-  <p *ngIf="chores.length > finishedChores.length">Work harder!</p>
->>>>>>> f8c5b62b6d7de91f0c9d15ba40a11c0b6862a007
 </div>
 <hr />
 <div class="doneChores">
-<<<<<<< HEAD
     <h3>Done Chores</h3>
     <ul>
         <li *ngFor = 'let done of finishedChores'>{{done}}</li>
     </ul>
-    <img src=targetImage alt="target with arrow in bullseye" *ngIf = "chores.length === 0 || (finishedChores.length - chores.length) >= 3"/>
-=======
-  <h3>Done Chores</h3>
-  <ul>
-    <li *ngFor="let done of finishedChores">{{ done }}</li>
-  </ul>
-  <img src="targetImage" />
->>>>>>> f8c5b62b6d7de91f0c9d15ba40a11c0b6862a007
+    <img src="../../assets/target.png" alt="test failed" />
+    <img src=targetImage alt="target with arrow in bullseye" *ngIf = "chores.length === 0 || ((finishedChores.length - chores.length) >= 3)"/>
 </div>
 <hr />
