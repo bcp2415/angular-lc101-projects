@@ -11,6 +11,7 @@
     placeholder="Enter movie title here"
   />
   <button (click)="addMovie(newMovie.value); newMovie.value = ''">Add</button>
+  <p *ngIf = "movies.includes(newMovie.value)">Please enter a title not already on the list.</p>
 
   <ng-template #errorMessage>
     <p>Please enter a movie title</p>
