@@ -4,7 +4,15 @@
     <li *ngFor="let movie of movies">{{ movie }}</li>
   </ol>
   <hr />
-  <input #newMovie type="text" placeholder="Enter movie title here" />
-  <button (click)="(true)">Add</button>
-  <p>{{ newMovie.value }}</p>
+  <input
+    #newMovie
+    (keyup.enter)="addMovie(newMovie.value); newMovie.value = ''"
+    type="text"
+    placeholder="Enter movie title here"
+  />
+  <button (click)="addMovie(newMovie.value); newMovie.value = ''">Add</button>
+
+  <ng-template #errorMessage>
+    <p>Please enter a movie title</p>
+  </ng-template>
 </div>
