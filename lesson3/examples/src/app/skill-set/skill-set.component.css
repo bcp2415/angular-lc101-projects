@@ -12,3 +12,9 @@ h3 {
   text-align: center;
   list-style-type: upper-roman;
 }
+
+.p-style {
+  color: palegreen;
+  text-align: right;
+  font-size: x-large;
+}

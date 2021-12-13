@@ -16,7 +16,7 @@ export class SkillSetComponent implements OnInit {
     "Git",
     "HTML/CSS",
   ];
-  alternateColor: string = "turquoise";
+  alternateColor: string = "blue";
   bulletType: string = "a";
   changeColor: boolean = false;
 
