@@ -8,12 +8,13 @@ import { Component } from "@angular/core";
 export class AppComponent {
   title = "Exercises: Angular Lesson 3";
 
-  color = "green";
-  height = 0;
-  width = 0;
-  message = "Space shuttle ready for takeoff!";
+  color: string = "green";
+  height: number = 0;
+  width: number = 0;
+  message: string = "Space shuttle ready for takeoff!";
+  takeOffEnabled: boolean = true;
 
-  handleTakeOff() {
+  handleTakeOff(rocketImage) {
     let result = window.confirm(
       "Are you sure the shuttle is ready for takeoff?"
     );
@@ -21,8 +22,10 @@ export class AppComponent {
     if (result) {
       this.color = "blue";
       this.height = 10000;
+      rocketImage.style.bottom = "10px";
       this.width = 0;
       this.message = "Shuttle in flight.";
+      this.takeOffEnabled = false;
     }
   }
 
@@ -32,6 +35,7 @@ export class AppComponent {
     this.color = "green";
     this.height = 0;
     rocketImage.style.bottom = "0px";
+    this.takeOffEnabled = true;
   }
 
   handleAbort(rocketImage) {
@@ -42,6 +46,7 @@ export class AppComponent {
       this.color = "red";
       this.height = 0;
       rocketImage.style.bottom = "0px";
+      this.takeOffEnabled = true;
     }
   }
 
@@ -50,21 +55,32 @@ export class AppComponent {
       let movement = parseInt(rocketImage.style.left) + 10 + 'px';
       rocketImage.style.left = movement;
       this.width = this.width + 10000;
+      this.issueWarning();
     } else if (direction === 'left') {
       let movement = parseInt(rocketImage.style.left) - 10 + 'px';
       rocketImage.style.left = movement;
       this.width = this.width - 10000;
+      this.issueWarning();
     } else if (direction === 'up') {
       let movement = parseInt(rocketImage.style.bottom) + 10 + 'px';
       rocketImage.style.bottom = movement;
       this.height = this.height + 10000;
+      this.issueWarning();
     } else if (direction === 'down') {
       let movement = parseInt(rocketImage.style.bottom) - 10 + 'px';
       rocketImage.style.bottom = movement;
       this.height = this.height - 10000;
+      this.issueWarning();
     }
-
-
-
   }  
+  
+  issueWarning() {
+    if (this.height > 100 || this.height < 10 || this.width > 100 || this.width < 0) {
+      this.color = "orange";
+    } 
+    
+    if (this.height < 100 && this.height > 0 && this.width > 0 && this.width < 100) {
+      this.color = "blue";
+    }
+  }
 }
