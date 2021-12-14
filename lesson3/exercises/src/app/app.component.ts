@@ -75,7 +75,7 @@ export class AppComponent {
   }
 
   issueWarning(rocketImage) {
-    if (rocketImage.style.bottom > 100) {
+    if (rocketImage.style.bottom > 50) {
       this.color = "orange";
     }
   }
